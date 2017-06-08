@@ -22,6 +22,16 @@ default: `$path/${base}_hap.mov` ⟶ `lol/cats/tiger.h246_hap.mov`
 
 we'll create your output directories for you.
 
+TEST RUN
+--------
+
+if you have [pv](http://www.ivarch.com/programs/pv.shtml) installed, we do pretty output one file per line. ffmpeg output is aggregated to _./ffmpeg-hap.out_.
+
+	$ ffmpeg-hap HULMU 'HAP/$base.mov'
+	HULMU/hulmis.mov: 2.27MiB 0:00:01 [1.72MiB/s] [=============================================>] 100%
+	HULMU/mehu_isi.mov: 1.91MiB 0:00:00 [2.06MiB/s] [===========================================>] 100%
+	HULMU/speed_noutaja.mov: 2.57MiB 0:00:01 [2.27MiB/s] [======================================>] 100%
+
 homebrew note
 -------------
 
