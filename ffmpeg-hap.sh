@@ -24,9 +24,12 @@ do_ffmpeg () {
 	name=${1##*/}
 	base=${name%.*}
 	ext=${name##*.}
-	eval out=$2
 
-	ffmpeg -i "$1" -c:v hap -an "$out"
+	eval out=$2
+	outpath=${out%/*}
+	mkdir -p $outpath
+
+	ffmpeg -hide_banner -i "$1" -c:v hap -an "$out"
 }
 
 # default output

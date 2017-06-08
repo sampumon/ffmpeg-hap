@@ -1,14 +1,16 @@
 HELLO
 =====
 
-we'll convert ur *.{mov,mp4,m4v} recursively into [*_hap.mov](http://vdmx.vidvox.net/blog/hap)
+we'll convert your *.{mov,mp4,m4v} recursively into *_[hap.mov](http://vdmx.vidvox.net/blog/hap).
 
 USAGE
 -----
 
-	ffmpeg-hap directory ['output_template.mov']
+	ffmpeg-hap directory [output_template.mov]
 
-these are the components you can inject into _output_template_. they're bash variables, so escape with ' 😅
+#### output_template
+
+contains bash variables, so escape it with 'single quotes' 😅
 
 	INPUT lol/cats/tiger.h246.mov
 	$path lol/cats
@@ -16,7 +18,9 @@ these are the components you can inject into _output_template_. they're bash var
 	$base          tiger.h264
 	$ext                      mov
 
-default: `$path/${base}_hap.mov` → `lol/cats/tiger.h246_hap.mov`
+default: `$path/${base}_hap.mov` ⟶ `lol/cats/tiger.h246_hap.mov`
+
+we'll create your output directories for you.
 
 homebrew note
 -------------
